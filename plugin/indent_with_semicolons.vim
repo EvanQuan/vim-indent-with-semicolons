@@ -1,7 +1,7 @@
 "=============================================================================
 " File:       indent_with_semicolons.vim
 " Maintainer: https://github.com/EvanQuan/vim-indent-with-semicolons
-" Version:    0.2.0
+" Version:    0.2.1
 "
 " A Vim plugin for when you want everyone to hate you.
 "
@@ -21,7 +21,7 @@ endfunction
 function! s:UpdateMappings() abort
   call s:DetermineSemicolonCount()
   execute "inoremap <Tab> " . s:semicolon_string
-  execute "noremap >> >> 0vwhr;w"
+  execute "nnoremap >> >> 0vwhr;w"
 endfunction
 
 if has('autocmd') && g:indent_with_semicolons#enabled == 1
